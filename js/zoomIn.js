@@ -1,23 +1,3 @@
-/*$(function () {
-	$('.zoomIn').on('mousemove', function (event) {
-		if (enableHandler) {
-			var
-				$this = $(this),
-				mouseLeft = event.pageX - $this.offset().left,
-				mouseTop = event.pageY - $this.offset().top,
-				originX = Math.floor(mouseLeft/ $this.width() * 100) + '%',
-				originY = Math.floor(mouseTop/ $this.height() * 100) + '%';
-
-			$this.find('img').css('transform-origin', originX + originY);
-			enableHandler = false;
-		}
-	});
-	
-	timer = window.setInterval(function (){
-			enableHandler = true;
-	}, 30);
-});*/
-
 !function ($) {
 	$.fn.zoomIn = function (options) {
 		try {
@@ -36,7 +16,7 @@
 						},
 						step: 0.5,
 						zoom: 2,
-						zoomMax: 8,
+						zoomMax: 10,
 						zoomMin: 1.5,
 						rate: 80,
 						callback: null
@@ -97,7 +77,7 @@
 						});
 						
 						wrapper.on('DOMMouseScroll mousewheel', function(event) {
-							if(event.originalEvent.detail > 0 || event.originalEvent.wheelDelta / 120 <= 0) {
+							if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta / 120 <= 0) {
 								if (settings.zoom > settings.zoomMin) {
 									settings.zoom -= settings.step;
 								}
