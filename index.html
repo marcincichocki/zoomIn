@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zoomIn plugin showpage</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.zoomIn > img { 
+			max-height: 150px !important;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- <img src="http://www.vsgamers.es/images/productos/d03-black-leather-1.jpg" class="image" alt="zoomIn plugin image" />
+	<img src="http://i.imgur.com/ftpRYQn.png" class="image" alt="test" />
+	<h1>TEST KURWA</h1> -->
+	<img src="http://www.geografia24.eu/geo120_mapa_polski/02ADMIN.jpg" alt="zoomIn" class="image">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/zoomIn.js"></script>
+	<script>
+	$(function () {
+		$('.image').zoomIn({
+			'description': true,
+			'message': 'Mapa polski'
+		});
+	});
+	</script>
+</body>
+</html>
